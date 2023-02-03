@@ -1,0 +1,45 @@
+<h2 class="screen-align">Createticket</h2>
+<div id="template-ihow" class="gjs-row">
+    <div id="template-i121" class="gjs-cell">
+        <label id="template-imov" class="label ">name</label>
+        <input id="template-ifhhi" [(ngModel)]="ticket.name" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+    <div id="template-i5mi" class="gjs-cell">
+        <label id="template-ifwpt" class="label ">description</label>
+        <input id="template-ivf6t" [(ngModel)]="ticket.description"
+        [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "
+        />
+    </div>
+    <div id="template-i3sg" class="gjs-cell">
+        <label id="template-itu0b" class="label ">callername
+            <br id="template-ifgx2" class="">
+        </label>
+        <input id="template-iey43" [(ngModel)]="ticket.callername" [ngModelOptions]="{standalone: true}"
+        ngDefaultControl class="input form-control " />
+    </div>
+</div>
+<div id="template-izic" class="gjs-row">
+    <div id="template-irbf" class="gjs-cell">
+        <label id="template-iwmpp" class="label ">types
+            <br id="template-i88wp" class="">
+        </label>
+        <div id="template-i49xh" class="">
+            <ng-select id="template-im9dj" name="dynamicdropdown_template-im9dj" [searchable]="true"
+            [virtualScroll]="true" [items]="typesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="ticket.types" [ngModelOptions]="{standalone: true}" ngDefaultControl
+            (click)="typesGpGetAllValues()" class="form-control "></ng-select>
+        </div>
+        <div id="template-ie5mg" (click)="GpCreate()" class="button btn btn-primary ">create</div>
+    </div>
+    <div id="template-itux" class="gjs-cell">
+        <label id="template-irtyi" class="label ">severity</label>
+        <div id="template-i1t2h" class="">
+            <ng-select id="template-iiv5b" name="dynamicdropdown_template-iiv5b" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="ticket.severity" [ngModelOptions]="{standalone: true}" ngDefaultControl
+            (click)="severityGpGetAllValues()" class="form-control "></ng-select>
+        </div>
+    </div>
+    <div id="template-ij25" class="gjs-cell"></div>
+</div>
